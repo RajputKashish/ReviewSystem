@@ -43,20 +43,20 @@ export const getUsers = async (req: Request, res: Response): Promise<void> => {
 
         if (search) {
             where.OR = [
-                { name: { contains: search as string, mode: 'insensitive' } },
-                { email: { contains: search as string, mode: 'insensitive' } },
-                { address: { contains: search as string, mode: 'insensitive' } },
+                { name: { contains: search as string } },
+                { email: { contains: search as string } },
+                { address: { contains: search as string } },
             ];
         }
 
         if (name) {
-            where.name = { contains: name as string, mode: 'insensitive' };
+            where.name = { contains: name as string };
         }
         if (email) {
-            where.email = { contains: email as string, mode: 'insensitive' };
+            where.email = { contains: email as string };
         }
         if (address) {
-            where.address = { contains: address as string, mode: 'insensitive' };
+            where.address = { contains: address as string };
         }
         if (role) {
             where.role = role as string;

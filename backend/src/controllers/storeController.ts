@@ -39,16 +39,16 @@ export const getStores = async (req: AuthRequest, res: Response): Promise<void> 
 
         if (search) {
             where.OR = [
-                { name: { contains: search as string, mode: 'insensitive' } },
-                { address: { contains: search as string, mode: 'insensitive' } },
+                { name: { contains: search as string } },
+                { address: { contains: search as string } },
             ];
         }
 
         if (name) {
-            where.name = { contains: name as string, mode: 'insensitive' };
+            where.name = { contains: name as string };
         }
         if (address) {
-            where.address = { contains: address as string, mode: 'insensitive' };
+            where.address = { contains: address as string };
         }
 
         // Build orderBy
