@@ -1,0 +1,93 @@
+/* User Pages CSS */
+.overall-rating {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.rating-value {
+    font-weight: 600;
+    color: var(--accent);
+}
+
+.rating-count {
+    color: var(--text-muted);
+    font-size: 0.85rem;
+}
+
+.no-rating {
+    color: var(--text-muted);
+    font-style: italic;
+}
+
+.user-rating {
+    text-align: center;
+}
+
+.your-score {
+    font-weight: 600;
+    color: var(--secondary);
+}
+
+.not-rated {
+    color: var(--text-muted);
+    font-style: italic;
+}
+
+.rating-action {
+    display: flex;
+    justify-content: center;
+}
+
+.rating-loading {
+    color: var(--primary-light);
+    font-size: 0.85rem;
+}
+
+/* Dashboard Info Cards */
+.dashboard-info {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+}
+
+.info-card {
+    background: var(--bg-card);
+    border-radius: var(--radius-lg);
+    padding: 1.5rem;
+    border: 1px solid var(--border);
+}
+
+.info-card h3 {
+    color: var(--text-primary);
+    margin: 0 0 1rem;
+    padding-bottom: 0.75rem;
+    border-bottom: 1px solid var(--border);
+}
+
+.quick-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.action-btn {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 1rem;
+    background: var(--bg-input);
+    border-radius: var(--radius-sm);
+    color: var(--text-primary);
+    text-decoration: none;
+    transition: var(--transition);
+}
+
+.action-btn:hover {
+    background: var(--primary);
+    transform: translateX(5px);
+}
+
+.action-icon {
+    font-size: 1.5rem;
+}
